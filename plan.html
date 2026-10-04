@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calibration plan</title>
+  </head>
+  <body>
+    <h1>Stepwise device calibration</h1>
+    <a href="/">Single command view</a>
+    <select id="mode">
+      <option value="mock">Simulated device</option>
+      <option value="real">Choose Bluetooth device</option>
+    </select>
+    <button id="connect">Connect / reconcile</button>
+    <textarea id="steps">
+[{"kind":"delta","value":10},{"kind":"absolute","value":25}]</textarea
+    >
+    <button id="begin">Begin plan</button
+    ><button id="cancel">Stop remaining steps</button>
+    <button id="continue">Continue reviewed plan</button
+    ><button id="drop">Simulate disconnect</button>
+    <pre id="state"></pre>
+    <script type="module" src="/src/plan-main.ts"></script>
+  </body>
+</html>
