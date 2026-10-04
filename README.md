@@ -1,0 +1,3 @@
+
+
+Origin admission mode: go run ./cmd/admission --origin HOST:PORT --listen HOST:PORT. The legacy command retains local Expect handling. In admission mode, forward Expect to the origin and do not send upload bytes until its 100 response. Other informational responses belong to the same request until its final response. A final rejection before permission is delivered immediately, the upload and later queued requests are not sent, and both connections close. No-body final responses obey their status semantics while retaining permitted representation metadata. Logs distinguish a completed response from an upload that was never forwarded.
