@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <meta charset="UTF-8" /><title>多层校样</title
+  ><link rel="stylesheet" href="styles.css" />
+  <h1>多层校样</h1>
+  <p>从底到顶合成，CPU 导出和像素证据与 GPU 预览共用当前场景。</p>
+  <textarea id="scene" rows="12" cols="85"></textarea
+  ><button id="apply">应用场景</button
+  ><button id="export">导出 CPU 像素与证据</button
+  ><button id="loss">丢失上下文</button
+  ><button id="restore">恢复</button
+  ><input id="x" type="number" value="0" /><input
+    id="y"
+    type="number"
+    value="0"
+  /><canvas id="view"></canvas>
+  <pre id="evidence"></pre>
+  <script src="proof.js"></script>
+  <script src="layers.js"></script>
+  <script src="layers-ui.js"></script>
+</html>
