@@ -1,0 +1,5 @@
+/* 全局基础样式在 App.svelte 中定义；此处保留供 Vite 入口引用 */
+html,
+body {
+  padding: 0;
+}
