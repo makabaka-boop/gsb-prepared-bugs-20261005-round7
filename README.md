@@ -1,0 +1,3 @@
+
+
+Credential rotation endpoints: /rotation/begin {user_id,old_credential_id}, /rotation/finish {user_id,ticket,new,old}, /rotation/cancel {user_id,ticket}. Begin returns a new-key registration challenge and old-key authentication challenge belonging to one ticket. Finish accepts the native registration fields under new and native assertion fields under old. Rotation requires proof from that ticket's currently active old credential, activates the new key and retires the old key as one result. Failed proofs, reused or cancelled tickets cannot change credentials, counters or consume either challenge. Reserved challenges cannot be spent through ordinary endpoints; retired IDs remain reserved.
